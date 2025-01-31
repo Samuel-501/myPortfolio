@@ -1,0 +1,311 @@
+
+/* link to font */
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+/* Global Stylings */
+*{
+	font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 50;
+    height: auto;
+    margin-right: 10px;
+}
+.logo span{
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+}
+.navbar{
+    position: fixed;
+    background-color: black;
+}
+.nav-item a{
+    color: white;
+    text-transform: uppercase;
+    margin: 0px 8px;
+}
+.nav-item a:hover{
+    color: crimson;
+    transform: scale(1.2);
+    transition: .3s;
+}
+.navbar-toggler-icon{
+    background-color: blue;
+    border-radius: 50%;
+}
+
+/* Hero */
+.hero{
+    background-image: url(../img/pictture-profile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #251d1d;
+    background-blend-mode: multiply;
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero .name{
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+}
+.hero .multi-text{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: italic;
+    color: blueviolet;
+}
+.hero .sub-hero{
+    text-align: center;
+    margin-top: 40px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+}
+.cta-button{
+    border-color: crimson;
+    padding: 10px 15px;
+    font-size: x-large;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: black;
+    color: crimson;
+}
+.cta-button:hover{
+border-color: black;
+color: white;
+background-color: crimson; 
+}
+.cta-button a{
+    text-decoration: none;
+}
+/* Services */
+.services{
+    margin-top: 7%;
+}
+.section-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.section-title-p{
+    text-align: center;
+}
+.service-bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.service-item{
+    background-image: url(../img/img-1.png);
+    background-size: cover;
+    background-color: #343d47;
+    background-blend-mode: multiply;
+    padding: 15px 40px;
+    border-radius: 25px;
+    width: 100%;
+    color: white;
+}
+.service-item h2{
+    font-weight: 700;
+}
+/* About */
+.about-animate{
+    overflow: hidden;
+}
+.about{
+    margin-top: 100px;
+}
+.about-animate .animate{
+    transform: translateX(-100%);
+}
+
+.about-animate.show-animate .animate{
+    transform: translateX(0);
+}
+.about-grid{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 60px;
+}
+.about-title{
+    text-transform: uppercase;
+}
+.about-grid img{
+    border-left: 7px solid crimson;
+    border-bottom: 7px solid crimson;
+    padding: 20px;
+    display: inline-block;
+}
+.cta-hero{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.btn-cta{
+    padding: 10px 15px;
+    font-size: x-large;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: transparent;
+    color: crimson;
+    margin-top: 20px;
+}
+.btn-cta:hover{
+    border-color: black;
+    color: white;
+    background-color: crimson; 
+}
+/* Testimonials */
+.testimonial{
+    margin-top: 10%;
+}
+.testimonial h2{
+    text-transform: uppercase;
+}
+
+/* Contact */
+.contact{
+    margin-top: 20px;
+    background: #a9a9a9;
+}
+.contact h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+.contact-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-left: 20px;
+}
+form input{
+    border: 1px solid transparent;
+}
+form textarea{
+    border: 1px solid transparent;
+}
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+
+/* Footer */
+footer{
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    margin-top: 10%;
+    color: white;
+}
+footer p{
+    text-transform: uppercase;
+    text-align: center;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Responsiveness */
+/* Medium Screens */
+@media screen and (min-width:768px) and (max-width: 991px) {
+    .service-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+/* Small Screens */
+@media screen and (min-width:576px) and (max-width: 767px) {
+    .hero .name{
+        text-align: center;
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .hero .multi-text{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 400;
+        font-style: italic;
+        color: blueviolet;
+    }
+    .hero .sub-hero{
+        text-align: center;
+        margin-top: 40px;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 40px;
+        color: #fff;
+    }
+    .service-bottom{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+    .about-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-grid img{
+        border-left: 7px solid crimson;
+        border-bottom: 7px solid crimson;
+        padding: 20px;
+        width: 100%;
+        display: inline-block;
+    }
+    .contact-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* XX-Small Screens */
+@media screen and (max-width: 575px) {
+    .hero .name{
+        text-align: center;
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .hero .multi-text{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 400;
+        font-style: italic;
+        color: blueviolet;
+    }
+    .hero .sub-hero{
+       display: none;
+    }
+    .service-bottom{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 70px;
+    }
+    .about-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-grid img{
+        border-left: 7px solid crimson;
+        border-bottom: 7px solid crimson;
+        padding: 20px;
+        width: 100%;
+        display: inline-block;
+    }
+    .contact-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
